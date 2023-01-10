@@ -1,0 +1,18 @@
+
+<div class="container my-5 bg-success bg-opacity-50 p-3">
+    <div class="container"> 
+        <div class="row">
+            <div class="col-md-6 col-sm-7 col-xs-12">
+                <div class="my-2">
+                    <h1>{{tituloPadre}}</h1>
+                </div>
+                <div class="my-2 py-2">
+                    <button class="btn  btn-success" (click)="CambiartituloPadre()"   >Padre: Cambiar titulo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------[] la variable del componentehijo lo igualo a la variable del padre para que reciba la informacion ------->
+<!-------() EL evento del componentehijo lo igualo a la variable del padre para que reciba la informacion ------->
+<app-hijo [tituloHijo]="tituloPadre" (onEnvioTituloHijo)="tituloPadre=$event" ></app-hijo>
